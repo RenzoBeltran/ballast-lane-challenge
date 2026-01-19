@@ -76,11 +76,6 @@ export const HomePage = () => {
                                             className="bg-white/90 border-none shadow-inner"
                                         />
                                     </div>
-                                    <Button 
-                                        className="!bg-pokemon-blue !text-white font-bold shadow-md hover:!bg-blue-700"
-                                    >
-                                        Search
-                                    </Button>
                                 </div>
                                 
                                 <div className="flex gap-2 bg-pokemon-dark p-1 rounded-lg">
