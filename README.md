@@ -1,39 +1,63 @@
 # Challenge Project
 
-Este repositorio contiene los proyectos de backend y frontend. A continuación se detallan los stacks y las instrucciones para ejecutar cada uno.
+This repository contains the backend and frontend projects. Below are the stacks and instructions to run each of them.
+
+## User Story: The Pokédex Explorer
+**Title:** Access and Consultation of the Pokémon Database
+
+As an **Authorized Pokémon Trainer (Admin User)**, I want to securely log in and access a centralized Pokémon directory, so that I can search, sort, and consult technical details (abilities, moves) of each species and prepare my strategies.
+
+### Acceptance Criteria
+
+These points define when the story is "done" and will serve as a guide for your tests (TDD).
+
+#### 1. Authentication and Security
+- Given I am on the Login screen, when I enter the credentials admin / admin, then I should be redirected to the main page.
+- Given I enter incorrect credentials, then the system should display a validation error from the backend.
+- Given I have not logged in, if I attempt to access protected routes (Main or Detail), then I should be redirected to the Login.
+- Given I have already logged in, if I attempt to return to the Login, then I should be redirected automatically to the Main page.
+
+#### 2. Visualization and Navigation (Dashboard)
+- Given I am on the main page, I want to see a paginated list of Pokémon showing their photo, name, and number.
+- I want to be able to sort this list by both name and number to quickly locate species.
+- I want to have a search bar to filter specific Pokémon.
+
+#### 3. Pokémon Detail
+- Given I select a Pokémon from the list, then I want to navigate to a detail view.
+- In the detail view, I want to see extended information including its abilities, moves, and forms.
 
 ## Backend (API)
 
-El backend está construido con **Ruby on Rails**.
+The backend is built with **Ruby on Rails**.
 
 **Stack:**
 - Ruby: 3.2.0
 - Rails: 7.1
-- Base de datos: SQLite3
+- Database: SQLite3
 
-**Instalación y Ejecución:**
+**Installation and Execution:**
 
-1.  Navegar a la carpeta del backend:
+1.  Navigate to the backend folder:
     ```bash
     cd backend-pokedex
     ```
-2.  Instalar dependencias:
+2.  Install dependencies:
     ```bash
     bundle install
     ```
-3.  Configurar la base de datos:
+3.  Configure the database:
     ```bash
     rails db:setup
     ```
-4.  Iniciar el servidor:
+4.  Start the server:
     ```bash
     rails s
     ```
-    El servidor correrá en `http://localhost:3000`.
+    The server will run at `http://localhost:3000`.
 
 ## Frontend (App)
 
-El frontend está construido con **React** utilizando **Vite**.
+The frontend is built with **React** using **Vite**.
 
 **Stack:**
 - React 19
@@ -41,18 +65,18 @@ El frontend está construido con **React** utilizando **Vite**.
 - TypeScript
 - TailwindCSS
 
-**Instalación y Ejecución:**
+**Installation and Execution:**
 
-1.  Navegar a la carpeta del frontend:
+1.  Navigate to the frontend folder:
     ```bash
     cd frontend-pokedex
     ```
-2.  Instalar dependencias:
+2.  Install dependencies:
     ```bash
     npm install
     ```
-3.  Iniciar el servidor de desarrollo:
+3.  Start the development server:
     ```bash
     npm run dev
     ```
-    La aplicación estará disponible en la URL que indique la consola (usualmente `http://localhost:5173`).
+    The application will be available at the URL indicated in the console (usually `http://localhost:5173`).
